@@ -86,7 +86,7 @@ $ docker build -t my_nginx_vietnam .
 
 run container từ image vừa tạo
 $docker build -t nginx-thetrong my_nginx_vietnam
-------> docker build -t <hub-user>/<repo-name>[:<tag>]  <----
+------> "docker build -t <hub-user>/<repo-name>[:<tag>]"  <----
 
     (nginx-thetrong : tên container) my_nginx_vietnam : image của container
 
@@ -100,7 +100,7 @@ login hub.docker trước khi push
 $docker login
 
 để push
-----> docker push <hub-user>/<repo-name>:<tag>      <-----------
+----> "docker push <hub-user>/<repo-name>:<tag>    <-----------
 $docker push thetrong/my_nginx_vietnam:26.11.21
 
 To commit changes
