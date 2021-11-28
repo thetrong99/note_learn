@@ -41,3 +41,24 @@ do
   command
 done
 #vong lap for
+
+#cau truc case in bash shell
+case value in
+  a)
+    command
+    #...
+    ;;
+  b)
+    command
+    #...
+    ;;
+esac
+Chúng ta cần thêm một dấu chấm phẩy kép (;;) sau mỗi trường hợp.
+
+#Cú pháp lựa chọn trong bash shell
+select item in list
+do
+  command
+done
+
+# $docker run -d -p 8080:80 --name abc nginx
