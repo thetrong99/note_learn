@@ -61,4 +61,26 @@ do
   command
 done
 
-# $docker run -d -p 8080:80 --name abc nginx
+#Làm việc với các chuỗi
+strings="Blogd.net"
+Chúng ta có thể lấy chiều dài của chuỗi bằng cách sử dụng ${#strings}.
+
+#Sử dụng mảng
+Mảng là một danh sách các mục, được khai báo bên trong dấu ngoặc đơn như sau:
+a=("di bien" "an uong" "di nui" "xem phim" "the thao")
+
+có thể tham chiếu bất kỳ mục nào trong một mảng bằng dấu ngoặc vuông:
+a[0]
+
+có thể nhận được tổng số mục trong một mảng bằng cú pháp này:
+${#a[@]}
+
+#use function
+function name {
+
+}
+examp : 
+function test1(){
+echo "Toi rat thich blogd.net"
+}
+test1
