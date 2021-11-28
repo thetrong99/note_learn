@@ -16,4 +16,12 @@ ky tu $ dai dien cho PID
     $@ tat ca cac doi so duoc trich dan rieng le
     $? trang thai thoat cua lenh cuoi cung duoc thuc thi
     $! so tien trinh cua lenh nen cuoi cung
-    
+if condition
+then
+  command
+elif
+  anothercommand
+else
+  yetanothercommand
+fi 
+#cau dieu kien   
