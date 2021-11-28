@@ -24,4 +24,20 @@ elif
 else
   yetanothercommand
 fi 
-#cau dieu kien   
+#cau dieu kien
+while condition
+do
+  command
+done
+#vong lap while
+until condition
+do
+  command
+done
+#vong lap until   
+
+for item in list
+do
+  command
+done
+#vong lap for
