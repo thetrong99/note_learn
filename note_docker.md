@@ -30,31 +30,31 @@ phải dừng container rồi xóa
 $docker stop <ID container>
 
 để xóa image  server nginx
-$docker rmi nginx
+    $docker rmi nginx
 
 xóa image bằng ID
-$docker rmi <ID>
+    $docker rmi <ID>
 
 một lệnh run khác :
-$docker run -d -p 8080:80 nginx
+    $docker run -d -p 8080:80 nginx
 (-d : detach  : Run container in background and print container ID 
 $docker run --help để xem options)
 
 để chạy lại container
-$docker start <name container>
+    $docker start <name container>
 
-$docker stop <name container>
+    $docker stop <name container>
 
-$docker rm <name container>
+    $docker rm <name container>
 
 kiểm soát tên container
-$ docker run -d -p 8080:80 --name mynginx nginx
+    $ docker run -d -p 8080:80 --name mynginx nginx
 
 
 để vào được bên trong container ( virtual server)
-$ docker exec -it mynginx bash
+    $ docker exec -it mynginx bash
 
-#cat /usr/share/nginx/html         : nội dung của trang chủ nginx
+    #cat /usr/share/nginx/html         : nội dung của trang chủ nginx
 
 muốn có 1 file html mới 
 
@@ -67,10 +67,10 @@ Chú ý : phải dùng git bash mới chạy được
 
 
 in ra logs trong container
-$docker logs mynginx
+    $docker logs mynginx
 
 muốn lấy ra log của container: 
-$docker run -d -p 8080:80 --name mynginx -v "E:\CLOUD\Docker\html":/usr/share/nginx/html -v "E:\CLOUD\Docker\logs": /var/log/nginx nginx
+    $docker run -d -p 8080:80 --name mynginx -v "E:\CLOUD\Docker\html":/usr/share/nginx/html -v "E:\CLOUD\Docker\logs": /var/log/nginx nginx
                                         map html từ ngoài vào container                 map ngược lại file log của container vào file tên log bên ngoài
                                                                                         chỉ cần nhập tên file logs tự tạo
 
@@ -85,23 +85,24 @@ $ docker build -t my_nginx_vietnam .
 ( -t: tag  )
 
 run container từ image vừa tạo
-$docker build -t nginx-thetrong my_nginx_vietnam
-------> "docker build -t <hub-user>/<repo-name>[:<tag>]"  <----
+    docker build -t nginx-thetrong my_nginx_vietnam
+
+    docker build -t <hub-user>/<repo-name>[:<tag>] 
 
     (nginx-thetrong : tên container) my_nginx_vietnam : image của container
 
 để đẩy image của mình lên dockerhub
 
 trước tiên phải tag
-$docker tag my_nginx_vietnam:1.0 thetrong/my_nginx_vietnam:26.11.21
---------> docker tag <existing-image> <hub-user>/<repo-name>[:<tag>] <-------------
+    $docker tag my_nginx_vietnam:1.0 thetrong/my_nginx_vietnam:26.11.21
+    docker tag <existing-image> <hub-user>/<repo-name>[:<tag>] 
 
 login hub.docker trước khi push
-$docker login
+    $docker login
 
 để push
-----> "docker push <hub-user>/<repo-name>:<tag>    <-----------
+    $docker push <hub-user>/<repo-name>:<tag>   
 $docker push thetrong/my_nginx_vietnam:26.11.21
 
 To commit changes
-----> docker commit <existing-container> <hub-user>/<repo-name>[:<tag>] <----------
+    docker commit <existing-container> <hub-user>/<repo-name>[:<tag>]
