@@ -1,2 +1,0 @@
-okchua
-ok nhe
